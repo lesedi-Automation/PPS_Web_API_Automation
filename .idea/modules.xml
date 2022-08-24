@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ppsWebAutomations/Authentication/Authentication.iml" filepath="$PROJECT_DIR$/ppsWebAutomations/Authentication/Authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppsAPIAutomations/Authentications/Authentications.iml" filepath="$PROJECT_DIR$/ppsAPIAutomations/Authentications/Authentications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PPS_Web_API_Automation.iml" filepath="$PROJECT_DIR$/.idea/PPS_Web_API_Automation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppsAPIAutomations/SharedClass/SharedClass.iml" filepath="$PROJECT_DIR$/ppsAPIAutomations/SharedClass/SharedClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppsWebAutomations/SharedClasses/SharedClasses.iml" filepath="$PROJECT_DIR$/ppsWebAutomations/SharedClasses/SharedClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppsAPIAutomations/ppsAPIAutomations.iml" filepath="$PROJECT_DIR$/ppsAPIAutomations/ppsAPIAutomations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppsWebAutomations/ppsWebAutomations.iml" filepath="$PROJECT_DIR$/ppsWebAutomations/ppsWebAutomations.iml" />
+    </modules>
+  </component>
+</project>

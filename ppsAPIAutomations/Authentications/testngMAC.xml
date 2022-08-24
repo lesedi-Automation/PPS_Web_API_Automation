@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Discovery Vitality Automation Testing on MAC Controller" parallel="tests" thread-count="15" verbose="5">
+    <listeners>
+        <listener class-name="com.pps.testautomation.listeners.TestListener"/>
+        <listener class-name="com.pps.testautomation.listeners.AnnotationTransformer"/>
+    </listeners>
+  
+   <test name="Web Login- Test on Chrome" preserve-order="true">
+  <parameter name="Device" value="Chrome"/>
+  <parameter name="URL" value="https://dcqccecapplb.discsrv.co.za/agent-desktop/home"/>
+    <parameter name="AccountType" value="CRMLogin"/>
+       <parameter name="EntityNumber" value="1000007813"/>
+       <parameter name="IDNumber" value="6909230272086"/>
+       <parameter name="PolicyNumber" value="6886898"/>
+    <classes>
+    <class name="com.pps.testautomation.steps.Login"/>
+    </classes>
+  </test>
+
+
+ 
+</suite>

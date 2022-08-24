@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SharedClasses" />
+        <module name="Authentications" />
+        <module name="Authentication" />
+        <module name="SharedClass" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Authentication" target="1.5" />
+      <module name="Authentications" target="1.5" />
+      <module name="ppsAPIAutomation" target="1.5" />
+      <module name="ppsAPIAutomations" target="1.5" />
+      <module name="ppsWebAutomation" target="1.5" />
+      <module name="ppsWebAutomations" target="1.5" />
+      <module name="SharedClass" target="8" />
+      <module name="SharedClasses" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
