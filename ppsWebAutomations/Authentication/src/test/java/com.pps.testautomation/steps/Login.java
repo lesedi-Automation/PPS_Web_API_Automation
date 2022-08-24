@@ -38,6 +38,23 @@ public class Login {
 
     }
 
+    @DataProvider
+
+    public Object[][] Authentication() throws Exception
+    {
+
+        System.out.println("setting excel file");
+        // Setting up the Test Data Excel file
+
+
+        System.out.println("Creating array");
+        Object[][] testObjArray = ExcelHandler.getTableArray("../src/data/testdata.xlsx","LoginCredentials","AccountType",Account);
+
+        return (testObjArray);
+
+    }
+
+
 
 
 }
