@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,12 +14,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Authentication" target="1.5" />
+      <module name="Authentication" target="18" />
       <module name="Authentications" target="1.5" />
       <module name="ppsAPIAutomation" target="1.5" />
       <module name="ppsAPIAutomations" target="1.5" />
       <module name="ppsWebAutomation" target="1.5" />
-      <module name="ppsWebAutomations" target="1.5" />
+      <module name="ppsWebAutomations" target="18" />
       <module name="SharedClass" target="8" />
       <module name="SharedClasses" target="8" />
     </bytecodeTargetLevel>

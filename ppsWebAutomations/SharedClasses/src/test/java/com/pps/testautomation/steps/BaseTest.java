@@ -1,7 +1,8 @@
 package com.pps.testautomation.steps;
 
 import com.pps.testautomation.deviceConfig.*;
-import com.sts.testautomation.deviceConfig.*;
+//import com.sts.testautomation.deviceConfig.*;
+//import io.appium.java_client.MobileElement;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;

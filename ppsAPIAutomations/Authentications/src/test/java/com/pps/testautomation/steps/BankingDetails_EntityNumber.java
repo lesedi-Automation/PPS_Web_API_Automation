@@ -5,8 +5,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.codoid.products.fillo.Recordset;
-import com.sts.testautomation.utilities.ApiHelper;
-import com.sts.testautomation.utilities.DataProvider;
+//import com.pps.testautomation.utilities.ApiHelper;
+//import com.pps.testautomation.utilities.DataProvider;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.json.JSONArray;
@@ -17,7 +17,7 @@ import static io.restassured.RestAssured.given;
 public class BankingDetails_EntityNumber extends repo {
 
 	
-	// Author: Thamsanqa Bhekisizwe
+	// Author:
 	
 	private static String BearerToken = null;
 
