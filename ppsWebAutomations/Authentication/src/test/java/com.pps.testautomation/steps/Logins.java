@@ -46,8 +46,6 @@ public class Logins extends BaseTest
 			//Setting the webdriver.chrome.driver property to its executable's location
 			System.setProperty("webdriver.chrome.driver", "/Users/lesedimatli/Desktop/Selenium/chromedriver");
 
-
-
 			//Instantiating driver object
 			driver = new ChromeDriver();
 
@@ -67,7 +65,7 @@ public class Logins extends BaseTest
 			driver.findElement(By.xpath("//header/div[3]/div[2]/div[2]/div[1]/div[3]/div[1]/form[1]/button[2]")).click();
 
 
-		//	Assert.assertEquals(curr_window_title, exp_title);
+
 
 			Thread.sleep(2000);
 			waitForFullPageLoad();
@@ -76,6 +74,8 @@ public class Logins extends BaseTest
 
 			Thread.sleep(2000);
 			waitForFullPageLoad();
+
+				Assert.assertEquals("Value 1", "Value1");
 
 
 
