@@ -2,6 +2,7 @@ package com.pps.testautomation.steps;
 
 
 import org.apache.tools.ant.taskdefs.optional.junit.BaseTest;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,13 +18,17 @@ import java.util.Map;
 //change
 public class Logins extends BaseTest
 {
-
 	//public BrowserLoginPage browserLoginPage;
 
 	private String Account;
 	public WebDriver driver;
 
 	//@Parameters({"URL","Device","AccountType"})
+
+	@FindBy(xpath = "//input[@id='js-site-search-input']")
+	private WebElement searchField;
+
+
 	@Test(description = "Instantiate Grid")
 	public void setupTest () {
 		try
@@ -44,10 +49,15 @@ public class Logins extends BaseTest
 
 			driver.get("https://www.shoprite.co.za/search/all?q=juice");
 
-			searchField.click();
+			driver.findElement(By.xpath("//input[@id='js-site-search-input']")).click();
+
+			driver.findElement(By.xpath("//input[@id='js-site-search-input']")).sendKeys("Fruitree Orange");
+
+		//	searchField.click();
 			searchField.sendKeys("Fruitree Orange");
 
 
+			// Data not yet parameterized
 
 
 		}
@@ -60,8 +70,6 @@ public class Logins extends BaseTest
 
 	}
 
-	@FindBy(xpath = "//input[@id='js-site-search-input']")
-	private WebElement searchField;
 
 	@Test(priority=1,description="Browser Login to Shoprite")
 	public void LoginToShoprite()
