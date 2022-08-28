@@ -1,8 +1,11 @@
 package com.pps.testautomation.steps;
 
 
+import org.apache.tools.ant.taskdefs.optional.junit.BaseTest;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
@@ -12,9 +15,10 @@ import java.net.URL;
 import java.util.Map;
 
 //change
-public class Logins
+public class Logins extends BaseTest
 {
 
+	//public BrowserLoginPage browserLoginPage;
 
 	private String Account;
 	public WebDriver driver;
@@ -38,6 +42,12 @@ public class Logins
 			driver.get("https://www.shoprite.co.za");
 
 
+			driver.get("https://www.shoprite.co.za/search/all?q=juice");
+
+			searchField.click();
+			searchField.sendKeys("Fruitree Orange");
+
+
 
 
 		}
@@ -50,16 +60,15 @@ public class Logins
 
 	}
 
-	@Test(priority=1,description="Browser Login to Shoprite", dataProvider = "Authentication")
-	public void LoginToCRM(String AccountType, String Username, String Password)
+	@FindBy(xpath = "//input[@id='js-site-search-input']")
+	private WebElement searchField;
+
+	@Test(priority=1,description="Browser Login to Shoprite")
+	public void LoginToShoprite()
 	{
 
 		try
 		{
-
-
-
-
 
 		}
 
