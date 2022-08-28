@@ -39,11 +39,11 @@ public class Logins extends BaseTest
 
 			//Creating a driver object referencing WebDriver interface
 
-
+		//	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Setting the webdriver.chrome.driver property to its executable's location
 			System.setProperty("webdriver.chrome.driver", "/Users/lesedimatli/Desktop/Selenium/chromedriver");
 
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 
 			//Instantiating driver object
 			driver = new ChromeDriver();
