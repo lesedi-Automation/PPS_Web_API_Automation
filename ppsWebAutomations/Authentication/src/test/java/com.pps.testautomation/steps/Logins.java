@@ -3,10 +3,13 @@ package com.pps.testautomation.steps;
 
 import org.apache.tools.ant.taskdefs.optional.junit.BaseTest;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
@@ -56,10 +59,24 @@ public class Logins extends BaseTest
 
 			driver.findElement(By.xpath("//input[@id='js-site-search-input']")).click();
 
+			waitForFullPageLoad();
 			driver.findElement(By.xpath("//input[@id='js-site-search-input']")).sendKeys("Fruitree Orange");
 
 		//	searchField.click();
-			searchField.sendKeys("Fruitree Orange");
+			waitForFullPageLoad();
+			driver.findElement(By.xpath("//header/div[3]/div[2]/div[2]/div[1]/div[3]/div[1]/form[1]/button[2]")).click();
+
+
+		//	Assert.assertEquals(curr_window_title, exp_title);
+
+			Thread.sleep(2000);
+			waitForFullPageLoad();
+			driver.findElement(By.xpath("//body[1]/googletagmanager:iframe[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/figure[1]/div[1]/a[1]/img[1]")).click();
+
+
+			Thread.sleep(2000);
+			waitForFullPageLoad();
+
 
 
 			// Data not yet parameterized
@@ -103,6 +120,7 @@ public class Logins extends BaseTest
 		try
 		{
            //Closing the browser
+			driver.close();
 			driver.quit();
 
 		}
@@ -115,6 +133,18 @@ public class Logins extends BaseTest
 
 	}
 
+
+	public void waitForFullPageLoad()
+	{
+		ExpectedCondition<Boolean> pageLoadCondition = new
+				ExpectedCondition<Boolean>() {
+					public Boolean apply(WebDriver driver) {
+						return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+					}
+				};
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(pageLoadCondition);
+	}
 	@DataProvider
 
 	public Object[][] Authentication() throws Exception
