@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import java.net.URL;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 //change
 public class Logins extends BaseTest
@@ -25,6 +26,8 @@ public class Logins extends BaseTest
 
 	//@Parameters({"URL","Device","AccountType"})
 
+
+	//Object Repository and test will be splitted later
 	@FindBy(xpath = "//input[@id='js-site-search-input']")
 	private WebElement searchField;
 
@@ -39,6 +42,8 @@ public class Logins extends BaseTest
 
 			//Setting the webdriver.chrome.driver property to its executable's location
 			System.setProperty("webdriver.chrome.driver", "/Users/lesedimatli/Desktop/Selenium/chromedriver");
+
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 			//Instantiating driver object
 			driver = new ChromeDriver();
